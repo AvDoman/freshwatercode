@@ -1,0 +1,79 @@
+#Fahrenheit to Celsius
+def fa_to_ce(x):
+    y = (x-32) * (5/9)
+    f_y = float(y)
+    return f_y
+#Fahrenheit to Kelvin
+def fa_to_ke(x):
+    y = (x-32) * (5/9) + 273.15
+    f_y = float(y)
+    return f_y
+#Celsius to Fahrenheit
+def ce_to_fa(x):
+    y = (x * 1.8) + 32
+    f_y = float(y)
+    return f_y
+#Celsius to Kelvin
+def ce_to_ke(x):
+    y = x + 273.15
+    f_y = float(y)
+    return f_y
+#Kelvin to Fahrenheit
+def ke_to_fa(x):
+    y = ((x - 273.15) * 1.8) + 32
+    f_y = float(y)
+    return f_y
+#Kelvin to Celsius
+def ke_to_ce(x):
+    y = x - 273.15
+    f_y = float(y)
+    return f_y
+print('Temperature Conversion')
+#validate scale
+while True:
+    scale = input('Enter Scale: ')
+    if scale == 'Fahrenheit':
+        break
+    elif scale == 'Celsius':
+        break
+    elif scale == 'Kelvin':
+        break
+    elif print('Invalid Input'):
+        continue
+#validate conversion scale
+while True:        
+    conver = input('Enter Desired Scale: ')
+    if conver == scale:
+        print('Please Select a Different Scale')
+        continue
+    elif conver == 'Celsius':
+        break
+    elif conver == 'Fahrenheit':
+        break
+    elif conver == 'Kelvin':
+        break
+    elif print('Invalid Input'):
+        continue
+#validate temp
+while True:
+    temp = input('Enter Temperature: ')
+    try:
+        f_temp = float(temp)
+        break
+    except:
+        print('Invalid Input')
+        continue
+x = f_temp
+if (scale == 'Fahrenheit') and (conver == 'Celsius') is True:
+    print(fa_to_ce(x))
+if (scale == 'Fahrenheit') and (conver == 'Kelvin') is True:
+    print(fa_to_ke(x))
+if (scale == 'Celsius') and (conver == 'Fahrenheit') is True:
+    print(ce_to_fa(x))
+if (scale == 'Celsius') and (conver == 'Kelvin') is True:
+    print(ce_to_ke(x))
+if (scale == 'Kelvin') and (conver == 'Fahrenheit') is True:
+    print(ke_to_fa(x))
+if (scale == 'Kelvin') and (conver == 'Celsius') is True:
+    print(ke_to_ce(x))
+print('DONE!')
